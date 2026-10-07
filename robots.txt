@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lettherebelighting208.com/sitemap.xml
