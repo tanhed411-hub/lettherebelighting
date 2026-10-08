@@ -329,7 +329,7 @@
     <p class="lede">Commercial-grade C9 LED bulbs on socket wire, cut to fit your roofline. Up before Thanksgiving, down in January — you never touch a ladder.</p>
     <p class="services-line">Design &middot; Install &middot; Takedown &middot; Storage</p>
     <div class="cta">
-      <a class="btn btn-red" href="mailto:lettherebelighting208@gmail.com?subject=Free%20estimate%20request">Get a free estimate</a>
+      <a class="btn btn-red" href="#contact">Get a free estimate</a>
       <a class="btn btn-outline" href="tel:+19162246001">Text or call (916) 224-6001</a>
       <a class="btn btn-outline" href="sms:+19162246001">Text me</a>
     </div>
@@ -517,20 +517,22 @@
       </div>
 
       <!--
-        FORM SETUP — currently this form opens the visitor's email app (mailto) with an
-        email already written to you (name, phone, address and request in the body).
-        To have submissions emailed to you automatically instead:
-          1. Go to https://formspree.io, sign up free, and create a form that sends to lettherebelighting208@gmail.com.
-          2. Formspree gives you an endpoint like https://formspree.io/f/abcdwxyz
-          3. Replace the action below with that URL and delete enctype="text/plain"
-             (i.e. action="https://formspree.io/f/abcdwxyz" method="post").
-          4. Re-upload index.html. Free plan covers ~50 submissions/month — plenty.
+        FORM: sent by FormSubmit (formsubmit.co, free, no account) straight to
+        lettherebelighting208@gmail.com. Every request arrives as an email; that inbox is the list.
+        _honey is a hidden spam trap; _next is the thank-you page.
       -->
-      <form action="mailto:lettherebelighting208@gmail.com?subject=Free%20estimate%20request%20from%20website" method="post" enctype="text/plain">
+      <form action="https://formsubmit.co/lettherebelighting208@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New estimate request from the website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://lettherebelighting208.com/thanks.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label for="name">Your name</label>
         <input id="name" name="name" type="text" required autocomplete="name">
         <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel">
+        <input id="phone" name="phone" type="tel" required autocomplete="tel">
+        <label for="email">Email (optional)</label>
+        <input id="email" name="email" type="email" autocomplete="email">
         <label for="address">Street address / neighborhood</label>
         <input id="address" name="address" type="text" autocomplete="street-address">
         <label for="body">What would you like lit?</label>
